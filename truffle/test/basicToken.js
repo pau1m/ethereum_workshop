@@ -1,7 +1,3 @@
-//const assertJump = require('./helpers/assertJump');
-
-//var BasicTokenMock = artifacts.require("./helpers/BasicTokenMock.sol");
-
 contract('SimpleToken', function(accounts) {
 
 
@@ -39,27 +35,17 @@ contract('SimpleToken', function(accounts) {
     assert.deepEqual(account0After, new web3.BigNumber('9999000000000000000000'))
     assert.deepEqual(account1After, new web3.BigNumber(amount))
 
-
-    //@todo check balance of second account is '1000000000000000000'
-    //@todo make number comparisons easier to read
-
-    // assert.equal(firstAccountBalance, 0);
-
-    // let secondAccountBalance = await token.balanceOf(accounts[1]);
-    // assert.equal(secondAccountBalance, 100);
   });
 
-  //@todo test minting function
-  //@todo test own function
+  // Add test for minting
+  // Add test for any custom code
+  // Test any single lines of code
+  // Test boundaries eg attempting to send greater than balance
+  // Test expected default values are present and correct
+  // Test possible paths through a function
 
-//   it("should throw an error when trying to transfer more than balance", async function() {
-//     let token = await BasicTokenMock.new(accounts[0], 100);
-//     try {
-//       let transfer = await token.transfer(accounts[1], 101);
-//       assert.fail('should have thrown before');
-//     } catch(error) {
-//       assertJump(error);
-//     }    
-//   });
+  // And then...
+  // Post gist or pastie of working code in chat channel
+  // ```[code]``` Three back ticks should force
 
 })
