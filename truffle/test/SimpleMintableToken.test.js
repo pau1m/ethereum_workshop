@@ -1,12 +1,12 @@
 contract('SimpleToken', function(accounts) {
 
 
-  const BasicToken = artifacts.require('SimpleMintableToken')
+  const SimpleMintableToken = artifacts.require('SimpleMintableToken')
 
   let token
 
   beforeEach(async function () {
-    token = await BasicToken.new()
+    token = await SimpleMintableToken.new()
   });
 
   it("should return the correct totalSupply after construction", async function() {
