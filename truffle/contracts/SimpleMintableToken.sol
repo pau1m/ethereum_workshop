@@ -51,7 +51,7 @@ contract BasicToken {
 /**
  * @title SimpleToken
  */
-contract SimpleToken is BasicToken {
+contract SimpleMintableToken is BasicToken {
 
     string public constant name = "SimpleToken";
     string public constant symbol = "SIM";
@@ -62,7 +62,7 @@ contract SimpleToken is BasicToken {
     /**
      * @dev Constructor that gives msg.sender all of existing tokens.
     */
-    function SimpleToken() public {
+    function SimpleMintableToken() public {
         owner = msg.sender;
         totalSupply = INITIAL_SUPPLY;
         balances[msg.sender] = INITIAL_SUPPLY;
