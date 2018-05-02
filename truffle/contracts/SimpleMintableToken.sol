@@ -22,4 +22,15 @@ contract SimpleMintableToken is BasicToken {
         balances[msg.sender] = INITIAL_SUPPLY;
         Transfer(0x0, msg.sender, INITIAL_SUPPLY);
     }
+
+    modifier onlyOwner {
+        require(msg.sender == owner);
+        _;
+    }
+
+    function mint(address _beneficiary, uint _value) public onlyOwner {
+        balances[_beneficiary] += _value;
+        totalSupply += _value;
+        Transfer(0x0,_beneficiary, _value);
+    }
 }
