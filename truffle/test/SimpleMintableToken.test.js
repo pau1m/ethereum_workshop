@@ -1,4 +1,4 @@
-contract('SimpleToken', function(accounts) {
+contract('SimpleMintableToken', function(accounts) {
 
 
   const SimpleMintableToken = artifacts.require('SimpleMintableToken')
@@ -22,7 +22,7 @@ contract('SimpleToken', function(accounts) {
     
     // Transfer
     let transfer = await token.transfer(accounts[1], amount)
-    
+
     let event = transfer.logs[0].args
 
     assert.equal(event.from, accounts[0])
